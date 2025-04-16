@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:56:32 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/10 13:21:24 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:38:37 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (dst == NULL || src == NULL)
-		return (0);
 	if (len > 0)
 	{
 		while (src[i] && i < len - 1)

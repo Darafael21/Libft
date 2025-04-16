@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:51:12 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 13:39:27 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:37:09 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[i]);
 	}
 	if (s[i] == cfinal)
-		return ("\0");
+		return (NULL);
 	return (NULL);
 }
 /*#include <stdio.h>
