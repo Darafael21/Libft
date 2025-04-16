@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:28:08 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 14:58:00 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/16 19:58:41 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,20 @@ static int	is_in_set(char c, const char *set)
 	return (0);
 }
 
+static char	*copy(const char *s1, size_t len, size_t start, char *trimmed)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		trimmed[i] = s1[start + i];
+		i++;
+	}
+	trimmed[i] = '\0';
+	return (trimmed);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -33,7 +47,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-
 	start = 0;
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
@@ -44,16 +57,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	len = end - start;
 	trimmed = malloc((len + 1) * sizeof(char));
-	if (!trimmed)
+	if (trimmed == NULL)
 		return (NULL);
 	i = 0;
-	while (i < len)
-	{
-		trimmed[i] = s1[start + i];
-		i++;
-	}
-	trimmed[i] = '\0';
-	return (trimmed);
+	return (copy(s1, len, start, trimmed));
 }
 /*#include <stdio.h>
 
@@ -63,6 +70,7 @@ int	main(void)
 	char *s2 = "xxxDavidDiasxxx";
 	char *s3 = "--trimmable--";
 	char *s4 = "nothing to trim";
+	char *s5 = "";
 	char *set1 = " \n\t";
 	char *set2 = "x";
 	char *set3 = "-";
@@ -83,5 +91,4 @@ int	main(void)
 	free(res4);
 	free(res5);
 	return (0);
-}
-*/
+}*/

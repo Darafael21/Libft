@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 16:50:02 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 13:41:57 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/16 15:20:22 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strnstr(const char *pool, const char *find, size_t len)
 		while ((pool[i + j] == find[j]) && (i + j < len))
 		{
 			j++;
+			if (find[j] == '\0')
+				return ((char *)pool + i);
 		}
-		if (find[j] == '\0')
-			return ((char *)pool + i);
 		i++;
 	}
 	return (NULL);

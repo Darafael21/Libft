@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:41:43 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 15:32:13 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/16 15:30:13 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == cfirst)
-		return (NULL);
+		return ((char *)&s[i]);
 	return (NULL);
 }
 /*#include <stdio.h>
@@ -34,7 +34,7 @@ char	*ft_strchr(const char *s, int c)
 
 int	main()
 {
-	char *str = "borbuleta";
+	char *str = "orbuleta";
 	char *str1 = "b";
 	char *str2 = "\0";
 	char *str3 = "ola";

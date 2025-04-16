@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:55:22 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 14:59:20 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/16 19:04:28 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,15 @@ int		ft_atoi(const char *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
+char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(const char *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strnstr(const char *pool, const char *find, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strnstr(const char *pool, const char *find, size_t len);
 
 void	ft_bzero(void *b, size_t len);
 void	*ft_calloc(size_t count, size_t size);

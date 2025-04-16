@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:51:12 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 15:37:09 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:55:54 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,15 @@ char	*ft_strrchr(const char *s, int c)
 	cfinal = (char) c;
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
-	while (s[--i])
+	while (1)
 	{
 		if (s[i] == cfinal)
 			return ((char *)&s[i]);
+		if (i == 0)
+			break ;
+		i--;
 	}
-	if (s[i] == cfinal)
-		return (NULL);
 	return (NULL);
 }
 /*#include <stdio.h>
@@ -37,7 +36,7 @@ char	*ft_strrchr(const char *s, int c)
 
 int	main()
 {
-	char *str = "borbuletab";
+	char *str = "orbuletab";
 	char *str1 = "b";
 	char *str2 = "\0";
 	char *str3 = "bola";
