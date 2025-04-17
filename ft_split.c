@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 15:51:22 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 19:33:16 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:16:30 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,15 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 #include <stdlib.h>
 
-char	**ft_split(char const *s, char c);
-
 void	print_split(char **split)
 {
 	int i = 0;
 
-	if (!split)
+	if (split == NULL)
 	{
 		printf("Result: NULL\n");
 		return;
 	}
-
 	while (split[i])
 	{
 		printf("split[%d] = \"%s\"\n", i, split[i]);
@@ -104,10 +101,8 @@ int	main(void)
 		"-----",
 		NULL
 	};
-
 	char separators[] = { ' ', ' ', ':', ' ', '-', '-' };
 	int i = 0;
-
 	while (tests[i])
 	{
 		printf("Input: \"%s\" | Separator: '%c'\n", tests[i], separators[i]);
@@ -115,6 +110,5 @@ int	main(void)
 		print_split(result);
 		i++;
 	}
-
-	return 0;
+	return (0);
 }*/

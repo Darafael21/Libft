@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 18:16:44 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 13:43:06 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:13:37 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	main(int ac, char **av)
 	(void)ac;
 	printf("%d\n%d\n", atoi(av[1]), ft_atoi(av[1]));
 }
-*/
-/*int	main(void)
+
+int	main(void)
 {
 	const char *test1 = "42";
 	const char *test2 = "   -42";
@@ -57,7 +57,6 @@ int	main(int ac, char **av)
 	const char *test6 = "abc123";
 	const char *test7 = "";
 	const char *test8 = "   +--+42";
-
 	printf("%d\n",atoi(test1));
 	printf("%d\n",atoi(test2));
 	printf("%d\n",atoi(test3));

@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 16:50:02 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 15:20:22 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:20:03 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *pool, const char *find, size_t len)
 
 	i = 0;
 	j = 0;
-	if (find[i] == '\0')
+	if (*find == '\0')
 		return ((char *)pool);
 	while (pool[i] && i < len)
 	{
@@ -46,13 +46,11 @@ int	main()
 	char *find4 = "senti";
 	char *find5 = "";
 	size_t len = 100;
-
 	printf("\n");
 	printf("%s\n", ft_strnstr(pool, find1, len));
 	printf("%s\n", ft_strnstr(pool, find2, len));
 	printf("%s\n", ft_strnstr(pool, find3, len));
 	printf("%s\n", ft_strnstr(pool, find4, len));
 	printf("%s\n", ft_strnstr(pool, find5, len));
-
-	return 0;
+	return (0);
 }*/

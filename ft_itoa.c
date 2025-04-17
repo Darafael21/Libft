@@ -6,13 +6,13 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:02:55 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 19:37:24 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:14:24 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*pre_conv(int len)
+static char	*numalloc(int len)
 {
 	char	*temp;
 
@@ -23,7 +23,7 @@ static char	*pre_conv(int len)
 	return (temp);
 }
 
-static int	int_len(long nbr)
+static int	numlen(long nbr)
 {
 	int	count;
 
@@ -47,39 +47,37 @@ char	*ft_itoa(int n)
 {
 	int		len;
 	int		i;
-	char	*result;
+	char	*endres;
 	long	nbr;
 
 	nbr = n;
-	len = int_len(nbr);
-	result = pre_conv(len);
-	if (!result)
+	len = numlen(nbr);
+	endres = numalloc(len);
+	if (endres == NULL)
 		return (NULL);
 	i = len - 1;
 	if (nbr < 0)
 		nbr = -nbr;
 	while (nbr != 0)
 	{
-		result[i] = (nbr % 10) + '0';
+		endres[i] = (nbr % 10) + '0';
 		nbr = nbr / 10;
 		i--;
 	}
 	if (n < 0)
-		result[0] = '-';
-	result[len] = '\0';
-	return (result);
+		endres[0] = '-';
+	endres[len] = '\0';
+	return (endres);
 }
 /*#include <stdio.h>
 #include <stdlib.h>
 
-char *ft_itoa(int n);
-
 int main(void)
 {
 	int i = 0;
-	int test_values[] = {0, 1, -1, 42, -42, 123456, -123456, 2147483647, -2147483648};
+	int test_values[] = {0, 1, -1, 42, -42, 123456,
+	 -123456, 2147483647, -2147483648};
 	int count = sizeof(test_values) / sizeof(test_values[0]);
-
 	while (i < count)
 	{
 		char *result = ft_itoa(test_values[i]);
@@ -94,6 +92,5 @@ int main(void)
 		}
 		i++;
 	}
-
-	return 0;
+	return (0);
 }*/

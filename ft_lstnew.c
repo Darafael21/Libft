@@ -1,49 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 18:55:02 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:13:54 by darafael         ###   ########.fr       */
+/*   Created: 2025/04/17 16:53:14 by darafael          #+#    #+#             */
+/*   Updated: 2025/04/17 17:14:37 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char	*temp;
-	size_t			i;
+	t_list	*new;
 
-	i = 0;
-	temp = malloc(count * size);
-	if (temp == NULL)
+	new = malloc(sizeof(t_list));
+	if (new == NULL)
 		return (NULL);
-	while (i < count * size)
-		temp[i++] = 0;
-	return (temp);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
 /*#include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {
-	size_t	i;
-	int *arr;
-	size_t n = 5;
-	i = 0;
-	arr = ft_calloc(0 , n);
-	if (!arr)
-	{
-		printf("Failed\n");
-		return (1);
-	}
-	while (i < n)
-	{
-		printf("%d ", arr[i]);
-		i++;
-	}
+	char *str = "David Dias 21";
+	t_list *node = ft_lstnew(str);
+	printf("%s\n", (char *)node->content);
+	printf("%p\n", node->next);
 	return (0);
 }*/

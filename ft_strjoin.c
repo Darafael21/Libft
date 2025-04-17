@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:45:27 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 14:46:03 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:17:23 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*#include <stdio.h>
 #include <stdlib.h>
 
-char *ft_strjoin(char const *s1, char const *s2);
-
 int main(void)
 {
 	char *first = "David ";
 	char *second = "Dias";
 	char *result = ft_strjoin(first, second);
-
 	if (result == NULL)
 	{
 		printf("Failed.\n");
 		return (1);
 	}
-
 	printf("%s\n", result);
-
-	free(result);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:00:49 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/11 13:39:05 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:15:22 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 int main()
 {
 	char str[20] = "1234567890";
-
 	printf("Before: %s\n", str);
 	ft_memmove(str + 2, str, 5);
 	printf("After : %s\n", str);
-
-	return 0;
+	return (0);
 }*/

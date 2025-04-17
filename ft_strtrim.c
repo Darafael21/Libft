@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:28:08 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 19:58:41 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:21:15 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	is_in_set(char c, const char *set)
 	return (0);
 }
 
-static char	*copy(const char *s1, size_t len, size_t start, char *trimmed)
+static char	*final(const char *s1, size_t len, size_t start, char *trimmed)
 {
 	size_t	i;
 
@@ -60,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (trimmed == NULL)
 		return (NULL);
 	i = 0;
-	return (copy(s1, len, start, trimmed));
+	return (final(s1, len, start, trimmed));
 }
 /*#include <stdio.h>
 
@@ -85,10 +85,5 @@ int	main(void)
 	printf("%s\n%s\"\n\n", s3, res3);
 	printf("%s\n%s\"\n\n", s4, res4);
 	printf("%s\n%s\"\n\n", s5, res5);
-	free(res1);
-	free(res2);
-	free(res3);
-	free(res4);
-	free(res5);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:51:12 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 17:55:54 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:21:05 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 		i++;
-	while (1)
+	while (i >= 0)
 	{
 		if (s[i] == cfinal)
 			return ((char *)&s[i]);
@@ -55,26 +55,4 @@ int	main()
 	printf("%s\n", ft_strrchr(str3, c));
 	printf("%s", ft_strrchr(str4, c));
 	return (0);
-}*/
-/*int main()
-{
-	
-char *str = "A";
-	int c = 'A';
-
-	char *res = ft_strrchr(str, c);
-
-	if (res)
-		printf("Found: %s\n", res);
-	else
-		printf("Not found!\n");
-}*/
-
-/*int	main()
-{
-	char *str = "A";  // Only 1 char
-	int c = 'Z';      // Not present
-
-	char *res = ft_strrchr(str, c);
-	printf("Result: %s\n", res ? res : "(null)");
 }*/

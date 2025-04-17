@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:40:20 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/11 13:43:28 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:17:28 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int	main()
 	char src[]="Dias";
 	char dst[20]="David ";
 	size_t	len;
-	
 	len = ft_strlcat(dst, src, sizeof(dst));
 	printf("%s", dst);
 	return (0);

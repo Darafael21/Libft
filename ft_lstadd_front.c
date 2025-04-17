@@ -1,49 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 18:55:02 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:13:54 by darafael         ###   ########.fr       */
+/*   Created: 2025/04/17 17:06:03 by darafael          #+#    #+#             */
+/*   Updated: 2025/04/17 17:28:40 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned char	*temp;
-	size_t			i;
-
-	i = 0;
-	temp = malloc(count * size);
-	if (temp == NULL)
-		return (NULL);
-	while (i < count * size)
-		temp[i++] = 0;
-	return (temp);
+	new->next = *lst;
+	*lst = new;
 }
-/*#include <stdio.h>
-#include <stdlib.h>
+/*
+#include <stdio.h>
 
 int	main(void)
 {
-	size_t	i;
-	int *arr;
-	size_t n = 5;
-	i = 0;
-	arr = ft_calloc(0 , n);
-	if (!arr)
-	{
-		printf("Failed\n");
-		return (1);
-	}
-	while (i < n)
-	{
-		printf("%d ", arr[i]);
-		i++;
-	}
-	return (0);
+	t_list *list = NULL;
+	t_list *node1 = ft_lstnew("Second");
+	t_list *node2 = ft_lstnew("First");
+	ft_lstadd_front(&list, node1);
+	ft_lstadd_front(&list, node2);
+	printf("%s\n", (char *)list->content);
+	printf("%s\n", (char *)list->next->content);
+	return 0;
 }*/

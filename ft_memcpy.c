@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 15:18:51 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/11 13:36:10 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:15:13 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	unsigned char	*tempdest;
 
 	if (src == NULL && dest == NULL)
-	{
 		return (dest);
-	}
 	tempsrc = (unsigned char *) src;
 	tempdest = (unsigned char *) dest;
 	i = 0;
@@ -39,10 +37,7 @@ int main()
 {
 	char src[] = "Hello David";
 	char dest[11] ="Holla Dias";
-
 	ft_memcpy(dest, src, strlen(src) + 1);
-
 	printf("%s\n", dest);
-	
-	return 0;
+	return (0);
 }*/

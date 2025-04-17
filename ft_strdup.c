@@ -6,13 +6,13 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 18:56:00 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 13:35:55 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:16:48 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 
@@ -36,14 +36,14 @@ char	*ft_strdup(const char *s)
 	ft_strcpy (dst, s);
 	return (dst);
 }
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 
 int	main()
 {
 	char str1[] = "hello";
 	char *copy = ft_strdup(str1);
 	char *copy2 = strdup(str1);
-
 	if (copy == NULL || copy2 == NULL)
 	{
 		printf("Memory failed");
@@ -52,8 +52,6 @@ int	main()
 	printf("%p\n", &str1);
 	printf("%p %s\n", copy , copy);
 	printf("%p %s\n", copy2, copy2);
-	free(copy);
-	free(copy2);
-	
 	return (0);
-}*/
+}
+*/

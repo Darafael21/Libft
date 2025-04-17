@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:41:43 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/16 15:30:13 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:16:39 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,11 @@ int	main()
 	char *str3 = "ola";
 	char *str4 = "";
 	int c = 'b';
-
 	printf("%s\n", strchr(str, c));
 	printf("%s\n", strchr(str1, c));
 	printf("%s\n", strchr(str2, c));
 	printf("%s\n", strchr(str3, c));
 	printf("%s\n", strchr(str4, c));
-
 	printf("%s\n", ft_strchr(str, c));
 	printf("%s\n", ft_strchr(str1, c));
 	printf("%s\n", ft_strchr(str2, c));

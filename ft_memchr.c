@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 15:14:30 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/15 13:40:07 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:14:53 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int	main()
 	char *str4 = "";
 	int c = 'b';
 	size_t	n = 3;
-
 	print_result(memchr(str, c, n));
 	print_result(memchr(str1, c, n));
 	print_result(memchr(str2, c, n));
@@ -61,7 +60,6 @@ int	main()
 	print_result(ft_memchr(str2, c, n));
 	print_result(ft_memchr(str3, c, n));
 	print_result(ft_memchr(str4, c, n));
-
 	return (0);
 }*/
 /*int	main()
@@ -73,13 +71,11 @@ int	main()
 	char *str4 = "";
 	int c = 'b';
 	size_t	n = 3;
-
 	printf("%s\n", memchr((char*)str, c, n));
 	printf("%s\n", memchr(str1, c, n));
 	printf("%s\n", memchr(str2, c, n));
 	printf("%s\n", memchr(str3, c, n));
 	printf("%s\n", memchr(str4, c, n));
-
 	printf("%s\n", ft_memchr(str, c, n));
 	printf("%s\n", ft_memchr(str1, c, n));
 	printf("%s\n", ft_memchr(str2, c, n));

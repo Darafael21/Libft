@@ -1,49 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/11 18:55:02 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:13:54 by darafael         ###   ########.fr       */
+/*   Created: 2025/04/17 16:15:46 by darafael          #+#    #+#             */
+/*   Updated: 2025/04/17 16:31:42 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*temp;
-	size_t			i;
-
-	i = 0;
-	temp = malloc(count * size);
-	if (temp == NULL)
-		return (NULL);
-	while (i < count * size)
-		temp[i++] = 0;
-	return (temp);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+		ft_putnbr_fd(n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
-/*#include <stdio.h>
-#include <stdlib.h>
-
-int	main(void)
+/*int main(void)
 {
-	size_t	i;
-	int *arr;
-	size_t n = 5;
-	i = 0;
-	arr = ft_calloc(0 , n);
-	if (!arr)
-	{
-		printf("Failed\n");
-		return (1);
-	}
-	while (i < n)
-	{
-		printf("%d ", arr[i]);
-		i++;
-	}
+	ft_putnbr_fd(-8821, 1);
 	return (0);
 }*/
