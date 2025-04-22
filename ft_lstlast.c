@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:42:31 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:49:15 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:48:42 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*temp;
+	t_list	*last;
 
-	temp = lst;
-	while (temp->next)
-	{
-		temp = temp->next;
-	}
-	return (temp);
+	last = lst;
+	if (last == NULL)
+		return (NULL);
+	while (last->next)
+		last = last->next;
+	return (last);
 }
 /*#include <stdio.h>
 

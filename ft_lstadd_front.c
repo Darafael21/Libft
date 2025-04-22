@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:06:03 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:28:40 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:47:59 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (new == NULL)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
@@ -29,5 +31,5 @@ int	main(void)
 	ft_lstadd_front(&list, node2);
 	printf("%s\n", (char *)list->content);
 	printf("%s\n", (char *)list->next->content);
-	return 0;
+	return (0);
 }*/
