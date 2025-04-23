@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:34:37 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/22 17:49:45 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:34:59 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int	main(void)
 	ft_lstadd_back(&list, node3);
 	ft_lstadd_back(&list, node4);
 	ft_lstclear(&node3, del);
-	printf("%s\n", (char *)node2->content);
+	printf("%s\n", (char *)node4->content);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:02:55 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:14:24 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:24:11 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ int main(void)
 		if (result)
 		{
 			printf("ft_itoa(%d) = \"%s\"\n", test_values[i], result);
-			free(result);
 		}
 		else
 		{

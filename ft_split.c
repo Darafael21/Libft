@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 15:51:22 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:16:30 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:08:23 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split_words(s, c, count_words(s, c)));
 }
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 void	print_split(char **split)
@@ -105,7 +104,7 @@ int	main(void)
 	int i = 0;
 	while (tests[i])
 	{
-		printf("Input: \"%s\" | Separator: '%c'\n", tests[i], separators[i]);
+		printf("%s\'%c'\n", tests[i], separators[i]);
 		char **result = ft_split(tests[i], separators[i]);
 		print_split(result);
 		i++;

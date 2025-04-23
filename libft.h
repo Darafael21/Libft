@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:55:22 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/22 15:26:15 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:54:13 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	ft_bzero(void *b, size_t len);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
@@ -66,6 +67,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len);
 
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t len);

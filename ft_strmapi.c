@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:00:41 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:19:29 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:20:07 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 /*#include <stdio.h>
 
-char example_function(unsigned int i, char c)
+char example(unsigned int i, char c)
 {
 	(void)i;
 	if (c >= 'a' && c <= 'z')
@@ -44,7 +44,7 @@ char example_function(unsigned int i, char c)
 int	main(void)
 {
 	char *ori = "DavidDias21";
-	char *map = ft_strmapi(ori, example_function);
+	char *map = ft_strmapi(ori, example);
 	if (!map)
 	{
 		printf("failed.\n");

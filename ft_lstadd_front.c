@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:06:03 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/22 17:47:59 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:39:17 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
 	t_list *list = NULL;
-	t_list *node1 = ft_lstnew("Second");
-	t_list *node2 = ft_lstnew("First");
+	t_list *node1 = ft_lstnew("First");
+	t_list *node2 = ft_lstnew("Second");
 	ft_lstadd_front(&list, node1);
 	ft_lstadd_front(&list, node2);
 	printf("%s\n", (char *)list->content);

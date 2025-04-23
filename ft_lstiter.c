@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:45:33 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/22 17:50:26 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:31:27 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	main(void)
 	ft_lstadd_back(&list, node2);
 	ft_lstadd_back(&list, node3);
 	ft_lstadd_back(&list, node4);
-	ft_lstiter(node3, f);
+	ft_lstiter(node2, f);
 //	printf("%s\n", (char *)node3->content);
 	return (0);
 }*/

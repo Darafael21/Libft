@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:35:18 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/22 17:50:41 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:52:08 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,51 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*newlist;
-	t_list	*newcont;
+	t_list	*newnode;
+	t_list	*headlist;
+	void	*newcontent;
 
 	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
-	newlist = NULL;
+	headlist = NULL;
 	while (lst)
 	{
-		newcont = ft_lstnew(f(lst->content));
-		if (newcont == NULL)
+		newcontent = f(lst->content);
+		if (newcontent == NULL)
 		{
-			ft_lstclear(&newlist, del);
-			return (NULL);
+			return (ft_lstclear(&headlist, del), NULL);
 		}
-		ft_lstadd_back(&newlist, newcont);
+		newnode = ft_lstnew(newcontent);
+		if (newnode == NULL)
+		{
+			del(newcontent);
+			return (ft_lstclear(&headlist, del), NULL);
+		}
+		ft_lstadd_back(&headlist, newnode);
 		lst = lst->next;
 	}
-	return (newlist);
+	return (headlist);
 }
 /*#include <stdio.h>
 
+void	*duplicate_funciona(void *content)
+{
+	(void)content;
+	return (strdup("Funciona"));
+}
+
 void	del(void *content)
 {
-	printf("%s\n", (char *)content);
 	free(content);
 }
 
-void	*f(void *content)
+void	print_list(t_list *lst)
 {
-	char **ptr = (char **)&content;
-	free(*ptr);
-	*ptr = strdup("Funciona");
+	while (lst)
+	{
+		printf("%s\n", (char *)lst->content);
+		lst = lst->next;
+	}
 }
 
 int	main(void)
@@ -59,7 +72,10 @@ int	main(void)
 	ft_lstadd_back(&list, node2);
 	ft_lstadd_back(&list, node3);
 	ft_lstadd_back(&list, node4);
-	ft_lstmap(node3, f, del);
-//	printf("%s\n", (char *)node3->content);
+	print_list(list);
+	t_list *mapped = ft_lstmap(list, duplicate_funciona, del);
+	print_list(mapped);
+	ft_lstclear(&list, del);
+	ft_lstclear(&mapped, del);
 	return (0);
 }*/
