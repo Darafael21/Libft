@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 18:55:02 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:13:54 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/25 17:52:26 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*temp;
+	void			*temp;
+	unsigned char	*str;
 	size_t			i;
 
 	i = 0;
+	if (size != 0 && count > ((size_t)-1) / size)
+		return (NULL);
 	temp = malloc(count * size);
 	if (temp == NULL)
 		return (NULL);
+	str = (unsigned char *)temp;
 	while (i < count * size)
-		temp[i++] = 0;
+		str[i++] = 0;
 	return (temp);
 }
 /*#include <stdio.h>
@@ -45,5 +49,6 @@ int	main(void)
 		printf("%d ", arr[i]);
 		i++;
 	}
+	free(arr);
 	return (0);
 }*/

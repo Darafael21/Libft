@@ -6,40 +6,36 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:00:49 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/23 10:56:21 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/25 18:57:36 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*tempsrc;
-	unsigned char	*tempdest;
+	unsigned char		*tempdest;
+	const unsigned char	*tempsrc;
 
-	if (src == NULL && dest == NULL)
-		return (NULL);
-	tempsrc = (unsigned char *) src;
-	tempdest = (unsigned char *) dest;
-	i = 0;
+	tempdest = (unsigned char *)dest;
+	tempsrc = (const unsigned char *)src;
+	if (tempdest == tempsrc || n == 0)
+		return (dest);
 	if (tempdest < tempsrc)
 	{
-		while (i < len)
-		{
-			tempdest[i] = tempsrc[i];
-			i++;
-		}
+		while (n--)
+			*tempdest++ = *tempsrc++;
 	}
 	else
 	{
-		while (0 < len--)
-		{
-			tempdest[len] = tempsrc[len];
-		}
+		tempdest = tempdest + n -1;
+		tempsrc = tempsrc + n -1;
+		while (n--)
+			*tempdest-- = *tempsrc--;
 	}
 	return (dest);
 }
+
 /*#include <stdio.h>
 #include <string.h>
 

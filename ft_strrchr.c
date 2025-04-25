@@ -6,7 +6,7 @@
 /*   By: darafael <darafael@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:51:12 by darafael          #+#    #+#             */
-/*   Updated: 2025/04/17 17:21:05 by darafael         ###   ########.fr       */
+/*   Updated: 2025/04/25 18:57:22 by darafael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strrchr(const char *s, int c)
 
 int	main()
 {
-	char *str = "orbuletab";
+	char *str = "orbuletba";
 	char *str1 = "b";
 	char *str2 = "\0";
 	char *str3 = "bola";
